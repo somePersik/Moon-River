@@ -1,0 +1,1684 @@
+/* Шрифты */
+@import url(https://fonts.googleapis.com/css?family=Forum:regular);
+@import url(../Fonts/Futura\ PT/stylesheet.css);
+
+/* Переменные */
+:root {
+    --px64: 3.55rem;
+    --px48: 2.66rem;
+    --px24: 1.33rem;
+    --px22: 1.22rem;
+    --px18: 1rem;
+    --px16: 0.88rem;
+    --px14: 0.77rem;
+    --gray: #272727;
+    --gray_2f: #2f2f2f;
+    --gray_75: #757575;
+    --gray_95: #959595;
+    --silver_c2: #c2c2c2;
+    --silver_c4: #c4c4c4;
+    --white_e7: #E7E7E7;
+    --white_ed: #ededed;
+    --white: #fff;
+    --brightGold: #EFC58B;
+    --darkGold: #E2B67A;
+    --mainMenu_transition:0.5s;
+}
+
+/* Обнуление */
+*,
+*:before,
+*:after {
+    padding:0;
+    margin:0;
+    border:0;
+    box-sizing:border-box;
+}
+a {
+    text-decoration:none;
+    color:inherit;
+}
+:focus, :active{outline: none;}
+nav,footer,header,aside{display: block;}
+
+html, body{
+    width: 100%;
+	min-height: 100%;
+	line-height: 1;
+    font-size:18px;
+    font-weight:400;
+    font-family:"Futura pt";
+    color:#000;
+}
+button{
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+ol, ul, li{list-style: none;}
+img {
+    vertical-align: top;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+svg path, svg line {
+    transition:0.3s;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+input {
+    outline:none;
+    background:none;
+}
+
+/* --------------------------- */
+.mainWrapper {
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+._limitation {
+    max-width:1115px;
+    margin: 0 auto;
+    box-sizing:content-box;
+    padding: 0 0.83rem;
+}
+/* --------------------------- */
+
+/* Шапка */
+.header {
+    width:100%;
+    font-size:1rem;
+    padding: 2.22em 0;
+    position:absolute;
+    top:0;
+    z-index: 100;
+    transition:0.3s;
+}
+.header._hidden {
+    transform:translateY(-2em);
+    opacity:0;
+    visibility: hidden;
+}
+.header._white .logo__changePart {
+    fill:var(--white);
+}
+.header ._limitation {
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.header__logo {
+    flex: 0 0 auto;
+}
+.logo .logo__changePart {
+    transition: var(--mainMenu_transition);
+}
+.header__logo:hover .logo__changePart {
+    fill:var(--darkGold);
+}
+.header__logo:hover .logo__changePart._white {
+    fill:var(--brightGold);
+}
+.logo {
+    width:14.33rem;
+}
+.logo svg {
+    width:100%;
+}
+.header__menu {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.header__notifications {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.22em;
+    margin: 0 5.55em 0 0;
+}
+.header__menu-item {
+    height:1.11em;
+    flex: 0 0 auto;
+    cursor:pointer;
+}
+.header__menu-item svg {
+    height:100%;
+}
+.header__menu-item:hover svg path, .header__menu-toggle:hover svg path, .header__menu-toggle:hover svg line {
+    stroke: var(--darkGold);
+}
+.header__menu-toggle {
+    width:1.66em;
+    flex: 0 0 auto;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__menu-toggle svg {
+    width:100;
+}
+.header__menu-toggle .header__openButton {
+    display:block;
+}
+.header__menu-toggle .header__closeButton {
+    display:none;
+}
+.header__menu-toggle._on .header__openButton {
+    display:none;
+}
+.header__menu-toggle._on .header__closeButton {
+    display:block;
+}
+
+/* Главный блок */
+.mainBlock {
+    width:100vw;
+    height:100vh;
+    font-size:1rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    margin: 0 0 1.11rem 0;
+}
+.mainBlock__leftPart {
+    width:61%;
+    height:100%;
+    position:absolute;
+    left:0;
+}
+.mainBlock__rightPart {
+    width:39%;
+    height:100%;
+    background-color:var(--gray);
+    position:absolute;
+    transition: var(--mainMenu_transition);
+    right:0;
+}
+.mainBlock__rightPart._full {
+    width:100%;
+}
+.mainBlock ._limitation {
+    position:relative;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+}
+.mainBlock__column {
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:2.77em;
+    position:absolute;
+    left:0;
+    margin:auto 0;
+    margin: 0 0 0 0.83rem;
+}
+.mainBlock__title {
+    font-size:var(--px64);
+    font-family:Forum;
+    color:var(--gray);
+    font-weight:400;
+    letter-spacing: 0.03em;
+}
+.mainBlock__row {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 0 0 0 7.16em;
+}
+.mainBlock__line {
+    width:10em;
+    border-bottom: 1px solid var(--gray);
+    margin: 0 2.11em 0 0;
+}
+.mainBlock__link {
+    font-family:"Segoe UI";
+    font-size:var(--px18);
+    font-style:italic;
+    color:var(--gray);
+    font-weight: 300;
+    transition:0.3s;
+}
+.mainBlock__link:hover {
+    color:var(--darkGold);
+}
+.mainBlock__ring {
+    width:17.88em;
+    position:absolute;
+    right:22%;
+}
+.mainBlock__ring img {
+    width:100%;
+}
+.mainBlock__language {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.55em;
+    position:absolute;
+    left:0;
+    bottom:3.33em;
+    margin: 0 0 0 0.83rem;
+}
+.mainBlock__langItem {
+    font-family: "Futura PT";
+    font-size:var(--px16);
+    color:var(--silver_c4);
+    text-transform: uppercase;
+    cursor:pointer;
+    font-weight:400;
+    letter-spacing: 0.05em;
+    transition:0.3s;
+}
+.mainBlock__langItem:not(._selected):hover {
+    color:var(--darkGold);
+}
+.mainBlock__langItem._selected {
+    color:var(--gray);
+}
+.mainBlock__abouteProtuct {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+    gap:0.5em;
+    position:absolute;
+    right:0;
+    bottom:3.33em;
+    margin: 0 0.83rem 0 0;
+}
+.mainBlock__productName {
+    font-family: "Futura PT";
+    font-size:var(--px16);
+    color:var(--white);
+    font-weight:400;
+    letter-spacing: 0.05em;
+}
+.mainBlock__compound {
+    font-family: "Futura PT";
+    font-size:var(--px18);
+    color:var(--silver_c2);
+    font-weight: 300;
+}
+.mainBlock__price {
+    font-family: "Segoe UI";
+    font-size:var(--px18);
+    color:var(--brightGold);
+    font-weight:300;
+    font-style:italic;
+    letter-spacing: 0.03em;
+}
+
+/* Главное меню */
+.mainMenu {
+    width:100dvw;
+    height:100dvh;
+    overflow:auto;
+    font-size:1rem;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:var(--gray);
+    transition: var(--mainMenu_transition);
+    visibility:hidden;
+    opacity:0;
+    z-index:50;
+}
+.mainMenu__wrapper {
+    width:100%;
+    min-height:100%;
+    background-color: var(--gray);
+}
+.mainMenu ._limitation {
+    height:100%;
+    display:flex;
+    flex-direction: column;
+}
+.mainMenu._opened {
+    visibility:visible;
+    opacity:1;
+}
+.mainMenu__subheader {
+    width:100%;
+    background-color: var(--gray_2f);
+}
+nav.mainMenu__types-links {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:2.77em;
+}
+.mainMenu__type-link {
+    position:relative;
+    font-family: "Futura PT";
+    text-transform:uppercase;
+    font-weight:400;
+    letter-spacing: 0.06em;
+    color:var(--white);
+    padding:1.5em 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition:0.3s;
+}
+.mainMenu__type-link:hover {
+    color:var(--brightGold);
+}
+.mainMenu__type-link p {
+    font-size:var(--px16);
+}
+.mainMenu__type-link span {
+    position:absolute;
+    bottom:0;
+    width:0;
+    height:2px;
+    opacity: 0;
+    background-color:var(--white);
+    transition:0.5s;
+}
+.mainMenu__type-link._selected span {
+    opacity:1;
+    width:100%;
+}
+.mainMenu__types-objects {
+    width:100%;
+    height:auto;
+    overflow:visible;
+}
+.mainMenu__type-object {
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding:3.88em 0;
+    gap:5.55em;
+}
+.mainMenu__filter {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1.66em;
+}
+h1.mainMenu__nameFilter {
+    font-family: "Futura PT";
+    font-size:var(--px16);
+    color:var(--white);
+    font-weight: 400;
+    text-transform:uppercase;
+    letter-spacing: 0.06em;
+}
+.mainMenu__filter-items {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.83em;
+    cursor:pointer;
+}
+p.mainMenu__filter-item {
+    font-family: "Futura PT";
+    font-size:var(--px18);
+    font-weight: 300;
+    color:var(--white);
+    letter-spacing: 0.06em;
+    transition:0.3s;
+}
+p.mainMenu__filter-item:hover {
+    color:var(--brightGold);
+}
+p.mainMenu__showAll-button {
+    font-family: "Segoe UI";
+    font-size: var(--px16);
+    font-style:italic;
+    color:var(--brightGold);
+    font-weight:300;
+    cursor:pointer;
+}
+.mainMenu__footer {
+    width:100%;
+    border-top:1px solid var(--gray_2f);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3.88em 0;
+}
+.mainMenu__picture {
+    width:67%;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainMenu__picture img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.darkCover {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: var(--gray);
+    opacity:0.5;
+}
+.mainMenu__descript {
+    font-family: "Futura PT";
+    font-size: var(--px18);
+    font-weight:300;
+    color:var(--white);
+    letter-spacing: 0.06em;
+    position:absolute;
+    top:1.66em;
+    left:1.66em;
+}
+.mainMenu__nameCollection {
+    position:absolute;
+    font-family: Forum;
+    font-size:var(--px48);
+    font-weight:400;
+    letter-spacing: 0.03em;
+    color:var(--white);
+    text-transform: uppercase;
+}
+.mainMenu__action-link {
+    position:absolute;
+    right:1.66em;
+    bottom:1.66em;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.27em;
+}
+.mainMenu__link-text {
+    font-family: "Futura PT";
+    font-size: var(--px18);
+    font-weight:300;
+    letter-spacing: 0.06em;
+    color:var(--white);
+}
+.mainMenu__link-arrow {
+    width:1.66em;
+}
+.mainMenu__link-arrow img {
+    width:100%;
+}
+.mainMenu__form {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* Общая форма */
+.generalForm {
+    display:flex;
+    font-size:1rem;
+}
+.generalForm__communications {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.83em;
+}
+.generalForm__inscription {
+    font-family:"Futura PT";
+    font-size:var(--px14);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color:var(--white);
+}
+.generalForm__numberPhone {
+    font-family:"Futura PT";
+    font-size:var(--px18);
+    font-weight: 300;
+    color:var(--silver_c2);
+    transition:0.5s;
+}
+.generalForm__numberPhone:hover {
+    color:var(--brightGold);
+}
+.generalForm__socialNetworks {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.11em;
+}
+.generalForm__icon {
+    width:1.94em;
+}
+.generalForm__icon img {
+    width:100%;
+}
+.generalForm__subscribe {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.83em;
+}
+p.generalForm__inscription-motivation {
+    font-family:"Futura PT";
+    font-size:var(--px14);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color:var(--white);
+}
+.generalForm__enterEmail {
+    width:15.55em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1em;
+    border-bottom: 1px solid var(--white);
+    padding: 0 0 0.55em 0;
+}
+input.generalForm__input {
+    width:100%;
+    font-family: "Futura PT";
+    font-size:var(--px18);
+    font-weight: 300;
+    color:var(--silver_c2);
+    flex: 1 1 auto;
+}
+button.generalForm__submit {
+    flex:0 0 2em;
+    background: none;
+}
+button.generalForm__submit img {
+    width:100%;
+}
+.generalForm__loaders {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.55em;
+}
+.generalForm__loader {
+    width:5em;
+}
+.generalForm__loader img {
+    width:100%;
+}
+
+/* Половые секции */
+.sections {
+    width:100%;
+    font-size:1rem;
+    position: relative;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap:1.11em;
+    margin: 0 0 1.11rem 0;
+}
+.sections__section {
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:0.75s;
+}
+.sections__section img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.sections__man._hidden {
+    transform: translateX(-3em);
+    opacity:0;
+}
+.sections__woman._hidden {
+    transform: translateX(3em);
+    opacity:0;
+}
+.sections__darkCover {
+    opacity:0.4;
+    transition:0.3s;
+}
+.sections__section:hover .sections__darkCover {
+    opacity:0.3;
+}
+.sections__column {
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition:0.4s;
+}
+.sections__section:hover .sections__for {
+    font-size: calc(var(--px64) + 3px);
+}
+.sections__section:hover .sections__line {
+    width:100%;
+}
+p.sections__actionMotivation {
+    font-family: "Futura PT";
+    font-size: var(--px24);
+    font-weight: 300;
+    color:var(--white);
+    margin-bottom:0.45em;
+}
+h2.sections__for {
+    font-family: Forum;
+    font-size: var(--px64);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color:var(--white);
+    margin-bottom:0.35em;
+    transition:0.4s;
+}
+span.sections__line {
+    width:8em;
+    border:1px solid var(--white);
+    transition:0.4s;
+}
+
+/* Геолокация */
+.geolocation {
+    width:100%;
+    position:relative;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size:1rem;
+    background-color: var(--gray);
+    margin: 0 0 1.11rem 0;
+}
+.geolocation__map {
+    width:50%;
+    position:relative;
+    transition:0.75s;
+}
+.geolocation__map._hidden {
+    transform: translateX(3em);
+    opacity:0;
+}
+.geolocation__map img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.geolocation ._limitation {
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0;
+    right:0;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.geolocation__textField {
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.geolocation__column {
+    width:70%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:3.33em;
+    transition:0.75s;
+}
+.geolocation__column._hidden {
+    transform: translateY(3em);
+    opacity:0;
+}
+.geolocation__explanationPart {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.88em;
+}
+.geolocation__title {
+    font-family: Forum;
+    font-size:var(--px48);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color:var(--white);
+}
+.geolocation__actionText {
+    font-family: "Futura PT";
+    font-size: var(--px18);
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--white);
+}
+form.geolocation__searchLocation {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:1em;
+    border-bottom: 1px solid var(--white);
+    padding: 0 0 0.55em 0;
+}
+input.geolocation__address {
+    font-family: "Futura PT";
+    font-size: var(--px18);
+    font-weight: 300;
+    color:var(--white);
+    flex: 1 1 auto;
+}
+button.geolocation__submit {
+    flex: 0 0 2.5em;
+}
+button.geolocation__submit img {
+    width:100%;
+}
+.geolocation__points {
+    width:50%;
+    height:100%;
+    position:relative;
+}
+.geolocation__point {
+    width:3.33em;
+    position:absolute;
+    cursor:pointer;
+}
+.geolocation__point img {
+    width:100%;
+}
+.geolocation__point .noselect {
+    display:block;
+}
+.geolocation__point .select {
+    display:none;
+}
+.geolocation__point._selected .noselect {
+    display:none;
+}
+.geolocation__point._selected .select {
+    display:block;
+}
+.geolocation__point.x77y149 {
+    left:10%;
+    top:24%;
+}
+.geolocation__point.x250y172 {
+    left:34%;
+    top:28%;
+}
+.geolocation__point.x365y232 {
+    left:50%;
+    top:38%;
+}
+.geolocation__point.x470y361 {
+    left:64%;
+    top:59%;
+}
+.geolocation__point.x258y412 {
+    left:35%;
+    top:68%;
+}
+.geolocation__dropAddress {
+    width:7.44em;
+    background-color:var(--gray_75);
+    color:var(--white);
+    font-family: "Futura PT";
+    font-size:var(--px18);
+    font-weight: 300;
+    text-align:center;
+    position:absolute;
+    left:80%;
+    bottom:110%;
+    padding:0.55em;
+}
+.geolocation__cursor {
+    width:1.33em;
+    position:absolute;
+    left:56%;
+    top:88%;
+}
+.geolocation__cursor img {
+    width:100%;
+}
+
+/* Продукты */
+.products {
+    width:100%;
+    font-size:1rem;
+    display:grid;
+    grid-template-columns: 1fr 42% 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap:1.11em
+}
+.products__product {
+    position:relative;
+    background-color:var(--white_ed);
+    display:flex;
+    justify-content:center;
+    transition: 0.75s;
+}
+.products__product._big {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+}
+.products__product._big._hidden {
+    transform: translateY(3em);
+    opacity:0;
+}
+.products__product._topLeft._hidden {
+    transform:translateX(-3em);
+    opacity:0;
+}
+.products__product._bottomLeft._hidden {
+    transform:translateX(-3em);
+    opacity:0;
+}
+.products__product._topRight._hidden {
+    transform:translateX(3em);
+    opacity:0;
+}
+.products__product._bottomRight._hidden {
+    transform:translateX(3em);
+    opacity:0;
+}
+.products__image {
+    width:65%;
+    position:absolute;
+    top:12%;
+}
+.products__image img {
+    width:100%;
+}
+.products__image._full {
+    width:100%;
+    height:100%;
+    position:static;
+}
+.products__image._full img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.products__abouteProtuct {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:0.5em;
+    position:absolute;
+    left:7.5%;
+    bottom:5%;
+}
+.products__productName {
+    font-family: "Futura PT";
+    font-weight: 400;
+    font-size: var(--px16);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+.products__compound {
+    font-family: "Futura PT";
+    font-weight: 300;
+    font-size: var(--px18);
+    color: var(--gray_75);
+}
+.products__price {
+    font-family: "Segoe UI";
+    font-style: italic;
+    font-weight: 400;
+    font-size: var(--px18);
+    letter-spacing: 0.03em;
+    color: var(--darkGold);
+}
+.products__product._big .products__productName {
+    color: var(--white);
+}
+.products__product._big .products__compound {
+    color: var(--white_e7);
+}
+.products__product._big .products__price {
+    color: var(--brightGold);
+}
+
+/* Слайдер-блок */
+.slider {
+    width:100%;
+    background-color:var(--gray);
+    font-size:1rem;
+    padding: 5.55em 0;
+}
+.slider ._limitation {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    gap:4.44em;
+}
+.slider__title {
+    font-family: Forum;
+    font-weight: 400;
+    font-size: var(--px48);
+    letter-spacing: 0.03em;
+    color: var(--white);
+    transition:0.75s;
+}
+.slider__title._hidden {
+    transform: translateY(1rem);
+    opacity:0;
+}
+.slider__showWrapper {
+    width:100vw;
+    height:21.38em;
+    overflow:hidden;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    position:relative;
+    transition:0.75s;
+}
+.slider__showWrapper._hidden {
+    opacity:0;
+}
+.slider__cover {
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+}
+.slider__showWrapper._closed .slider__cover {
+    display:block;
+}
+.slider__centerWrapper {
+    width:0;
+    height:100%;
+    overflow:visible;
+    position:relative;
+}
+.slider__slider-line {
+    min-width:100%;
+    height:100%;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.38em;
+}
+.slider__slide {
+    width:auto;
+    height:100%;
+    position:relative;
+}
+.slider__slide img {
+    height:100%;
+}
+.slider__downElements {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider__socialNetworks {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1.11em;
+    transition:0.75s;
+}
+.slider__socialNetworks._hidden {
+    transform:translateY(1em);
+    opacity:0;
+}
+.slider__socialIcon {
+    width:1.94em;
+}
+.slider__socialIcon img {
+    width:100%;
+}
+.slider__manipulation {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2.77em;
+    position:relative;
+    transition:0.75s;
+}
+.slider__manipulation._hidden {
+    transform:translateY(1em);
+    opacity:0;
+}
+.slider button {
+    width:2.83em;
+}
+.slider button img {
+    width:100%;
+}
+.slider__dots {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.94em;
+}
+.slider__dot {
+    width:0.44em;
+    height:0.44em;
+    border-radius:100%;
+    background-color:var(--gray_75);
+    cursor:pointer;
+    transition:0.5s;
+}
+.slider__dot._selected {
+    background-color:var(--white);
+}
+.slider__darkCover {
+    display:none;
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+.slider__manipulation._closed .slider__darkCover {
+    display:block;
+}
+
+/* Контакты */
+.contacts {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1rem;
+}
+.contacts__image {
+    width:50%;
+    transition:0.75s;
+}
+.contacts__image._hidden {
+    transform:translateX(-3em);
+    opacity:0;
+}
+.contacts__image img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.contacts__formField {
+    width:50%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.contacts__column {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:6.11em;
+    transition:0.75s;
+}
+.contacts__column._hidden {
+    transform:translateY(3em);
+    opacity:0;
+}
+.contacts__contact {
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    gap:1.66em;
+}
+.contacts__inscription {
+    font-family: "Futura PT";
+    font-weight: 400;
+    font-size: var(--px18);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--gray);
+}
+.contacts__numberPhone {
+    font-family: "Futura PT";
+    font-weight: 300;
+    font-size: var(--px22);
+    color: var(--gray_95);
+    transition:0.5s;
+}
+.contacts__numberPhone:hover {
+    color:var(--darkGold);
+}
+.contacts__subscribe {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap:1.66em
+}
+.contacts__enterEmail {
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5em;
+    border-bottom: 1px solid var(--gray);
+    padding: 0 0 0.44em 0;
+}
+.contacts__input {
+    flex: 1 1 auto;
+    font-family: "Futura PT";
+    font-weight: 300;
+    font-size: var(--px22);
+    color: var(--gray);
+}
+.contacts__submit {
+    flex: 0 0 2em;
+}
+.contacts__submit img {
+    width:100%;
+}
+
+/* Подвал */
+.footer {
+    width:100%;
+    background-color:var(--gray);
+    font-size:1rem;
+    padding: 4.44em 0 5em;
+}
+.footer ._limitation {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:5em;
+}
+.footer__links {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__link {
+    font-family: "Futura PT";
+    font-weight: 500;
+    font-size: var(--px14);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--white);
+    transition:0.3s;
+}
+.footer__link:hover {
+    color: var(--brightGold);
+}
+.footer__row {
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.footer__logo .logo__changePart {
+    fill:var(--white);
+}
+.footer__logo:hover .logo__changePart {
+    fill:var(--brightGold);
+}
+.footer__form {
+    flex-direction: row;
+    align-items: flex-start;
+    gap:4.44em;
+}
+
+/* Адаптив */
+@media (max-width: 1120px) {
+    html, body{
+        font-size:16px;
+    }
+}
+@media (max-width: 1080px) {
+    ._limitation {
+        max-width:900px;
+    }
+    html, body{
+        font-size:15px;
+    }
+    .header {
+        font-size:1.25rem;
+    }
+    .logo {
+        width:17rem;
+    }
+
+    nav.mainMenu__types-links {
+        justify-content: space-between;
+        gap:0;
+    }
+}
+@media (max-width: 950px) {
+    html, body{
+        font-size:14px;
+    }
+}
+@media (max-width: 880px) {
+    html, body{
+        font-size:13px;
+    }
+    .mainBlock__ring {
+        right: calc(3% + 0.83rem);
+    }
+}
+@media (max-width: 750px) {
+    .mainBlock__ring {
+        right:5%;
+    }
+    ._limitation {
+        max-width:700px;
+    }
+}
+@media (max-width: 710px) {
+    html, body{
+        font-size:12px;
+    }
+    .mainBlock__leftPart {
+        width:50%;
+    }
+    .mainBlock__rightPart {
+        width:50%;
+    }
+    .mainBlock__row {
+        margin:0;
+    }
+}
+@media (max-width: 670px) {
+    html, body {
+        font-size: 11px;
+    }
+    .geolocation {
+        flex-direction: column;
+        font-size:1.4rem;
+    }
+    .geolocation ._limitation {
+        display:contents;
+    }
+    .geolocation__textField {
+        width:100%;
+        justify-content: center;
+        padding: 5em 0;
+    }
+    .geolocation__column {
+        width:15em;
+    }
+    .geolocation__map {
+        width:100%;
+    }
+    .contacts__column {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: flex-start;
+        gap:3em;
+    }
+}
+@media (max-width:610px) {
+    html, body {
+        font-size: 18px;
+    }
+    .header {
+        font-size:1rem;
+    }
+    .header ._limitation {
+        flex-direction: column;
+        justify-content:center;
+        gap:2em;
+    }
+    .logo {
+        width:15em;
+    }
+    .header__menu svg path, .header__menu svg line {
+        stroke:var(--gray);
+    }
+    .header._white svg path, .header._white svg line {
+        stroke:var(--white);
+    }
+    .mainBlock__leftPart {
+        width:100%;
+        height:50%;
+        left:none;
+        top:0;
+    }
+    .mainBlock__rightPart {
+        width:100%;
+        height:50%;
+        right:none;
+        bottom:0;
+    }
+    .mainBlock__rightPart._full {
+        height:100%;
+    }
+    .mainBlock__column {
+        top:25%;
+        left:0; right:0;
+        margin:0 auto;
+        align-items: center;
+    }
+    .mainBlock__ring {
+        top:55%;
+        left:0; right:0;
+        margin:0 auto;
+    }
+    .mainBlock__language {
+        gap:0.75em;
+    }
+    .mainBlock__langItem {
+        color:var(--silver_c4);
+    }
+    .mainBlock__langItem._selected {
+        color:var(--white);
+    }
+
+    nav.mainMenu__types-links {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        gap:0;
+    }
+    .mainMenu__type-link {
+        width:100%;
+    }
+    .mainMenu__type-link._selected span {
+        width:25%;
+    }
+    .mainMenu__type-object {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-content:center;
+        gap:2.5em;
+    }
+    .mainMenu__footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:5em;
+    }
+    .mainMenu__picture {
+        width:90%;
+        position:relative;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .mainMenu__picture img {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+    .darkCover {
+        position:absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        background-color: var(--gray);
+        opacity:0.5;
+    }
+    .mainMenu__descript {
+        font-family: "Futura PT";
+        font-size: var(--px18);
+        font-weight:300;
+        color:var(--white);
+        letter-spacing: 0.06em;
+        position:absolute;
+        top:1.66em;
+        left:1.66em;
+    }
+    .mainMenu__nameCollection {
+        position:absolute;
+        font-family: Forum;
+        font-size:var(--px48);
+        font-weight:400;
+        letter-spacing: 0.03em;
+        color:var(--white);
+        text-transform: uppercase;
+    }
+    .mainMenu__action-link {
+        position:absolute;
+        right:1.66em;
+        bottom:1.66em;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:1.27em;
+    }
+    .mainMenu__link-text {
+        font-family: "Futura PT";
+        font-size: var(--px18);
+        font-weight:300;
+        letter-spacing: 0.06em;
+        color:var(--white);
+    }
+    .mainMenu__link-arrow {
+        width:1.66em;
+    }
+    .mainMenu__link-arrow img {
+        width:100%;
+    }
+    .mainMenu__form {
+        width:100%;
+        align-self: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .geolocation__textField {
+        padding: 7.5em 0;
+    }
+    .geolocation__column {
+        width:65%;
+    }
+    .geolocation__map {
+        font-size: 0.9rem;
+    }
+    .sections {
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap:1.11em;
+    }
+    .products {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 18em 1fr 18em;
+        gap:1.11em
+    }
+
+    .slider ._limitation {
+        align-items: center;
+    }
+    .slider__title {
+        text-align: center;
+    }
+    .slider__showWrapper {
+        height:20em;
+    }
+    .slider__downElements {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap:4em;
+    }
+    .slider__socialNetworks {
+        gap:2em;
+    }
+
+    .products__product._big {
+        grid-column: 1 / span 2;
+        grid-row: 2 / span 1;
+    }
+    .contacts {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .contacts__image {
+        width:100%;
+    }
+    .contacts__formField {
+        width:100%;
+        padding:12em 0;
+    }
+    .footer {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:5em;
+    }
+    .footer ._limitation {
+        display:contents;
+    }
+    .footer__links {
+        width:100%;
+        height:2px;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        overflow:hidden;
+        transition:0.5s;
+    }
+    .footer__links._opened {
+        height:auto;
+    }
+    .footer__link {
+        color:var(--white);
+        background-color:var(--gray_2f);
+        text-align: center;
+        width:100%;
+        padding: 1.5em 0;
+    }
+    .footer__link:hover {
+        background-color:var(--white);
+        color:var(--gray);
+    }
+    .footer__row {
+        width:auto;
+        flex-direction: column;
+        justify-content: center;
+        gap:4em;
+    }
+    .footer__form {
+        width:100%;
+        gap:auto;
+        justify-content: space-between;
+    }
+}
+@media (max-width:550px) {
+    html, body {
+        font-size:16px;
+    }
+    .generalForm {
+        width:auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+    }
+    .generalForm > * {
+        align-items: center;
+    }
+}
+@media (max-width: 500px) {
+    .mainBlock__row {
+        margin:0;
+    }
+}
+@media (max-width: 450px) {
+    html, body {
+        font-size: 15px;
+    }
+    .mainMenu__picture {
+        width:100vw;
+    }
+}
+@media (max-width:400px) {
+    html, body {
+        font-size: 14px;
+    }
+    .mainMenu__type-object {
+        column-gap: 15%;
+    }
+    .mainMenu__nameCollection {
+        font-size:2em;
+    }
+    .mainMenu__descript {
+        left:1em; top:1em;
+    }
+    .mainMenu__action-link {
+        bottom:1em; right:1em;
+    }
+    .products {
+        grid-template-rows: 16em 1fr 16em;
+    }
+}
+@media (max-width:350px) {
+    html, body {
+        font-size: 12px;
+    }
+}
+@media (max-width:320px) {
+    html, body {
+        font-size: 11px;
+    }
+}
+
+@media (max-height:650px) and (max-width:610px) {
+    .mainBlock__column {
+        font-size:0.6rem;
+    }
+    .mainBlock__title {
+        font-size: var(--px48);
+    }
+    .mainBlock__ring {
+        width:15em;
+    }
+}
+@media (max-height:600px) and (max-width:610px) {
+    .mainBlock__column {
+        top:30%;
+    }
+}
+@media (max-height:500px) and (max-width:610px) {
+    .mainBlock__column {
+        font-size:0.5rem;
+    }
+    .mainBlock__title {
+        font-size: 4em;
+    }
+    .mainBlock__ring {
+        width:12em;
+    }
+}
+@media (min-width:1500px) {
+    .slider ._limitation {
+        overflow:hidden;
+    }
+}
